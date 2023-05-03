@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	background-color: #222831;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.auth {
+	height: 400px;
+	width: 400px;
+	background-color: #eeeeee;
+	padding: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 20px;
+	.rememberDiv {
+		display: flex;
+		gap: 20px;
+	}
+	button {
+		padding: 10px 20px;
+		background-color: #00adb5;
+		border: none;
+		border-radius: 10px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		color: white;
+		cursor: pointer;
+		img {
+			width: 20px;
+		}
+	}
+}
+
+.room-container {
+	@extend .auth;
+	padding: 60px;
+	justify-content: center;
+	gap: 20px;
+	input {
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 0.5px solid black;
+	}
+}
+
+.chat {
+	background-color: #fff;
+	height: 70vh;
+	width: 70vh;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	header {
+		background-color: #eb455f;
+		border-radius: 10px 10px 0 0;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+		padding: 5px;
+		align-items: center;
+        height: 50px;
+		a {
+			text-decoration: none;
+			color: rgb(252, 252, 252);
+		}
+	}
+	.messages {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		padding: 20px 10px;
+		.user-message {
+			max-width: 150px;
+			padding: 4px;
+			background-color: #00adb5;
+			align-self: flex-end;
+			color: white;
+			border-radius: 4px 4px 0 4px;
+		}
+		.reply-message {
+			max-width: 150px;
+			padding: 4px;
+			background-color: #252A34;
+			align-self: flex-start;
+			color: white;
+			border-radius: 4px 4px 0 4px;
+            display: flex;
+            flex-direction: column;
+            #user-message-name{
+                font-size: 15px;
+                text-transform: capitalize;
+                color:#eb455f;
+                margin-bottom: 5px;
+            }
+		}
+	}
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px;
+		gap: 10px;
+		input {
+			padding: 5px 10px;
+			width: 60%;
+			border-radius: 5px;
+			border: 0.5px solid black;
+		}
+		button {
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: 0.5px solid black;
+			background-color: #00adb5;
+			color: white;
+		}
+	}
+}
